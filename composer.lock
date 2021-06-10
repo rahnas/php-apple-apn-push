@@ -1,0 +1,87 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d22c216e22ce499f185a9c59cefe10ee",
+    "packages": [
+        {
+            "name": "apple/apn-push",
+            "version": "v3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ZhukV/AppleApnPush.git",
+                "reference": "43802b9ba2aab9343641c3c811385efc8294c1ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ZhukV/AppleApnPush/zipball/43802b9ba2aab9343641c3c811385efc8294c1ee",
+                "reference": "43802b9ba2aab9343641c3c811385efc8294c1ee",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": "^7.1 | ^8.0"
+            },
+            "require-dev": {
+                "escapestudios/symfony2-coding-standard": "~3.0",
+                "phpmetrics/phpmetrics": "^2.0",
+                "phpunit/phpunit": "^8.0 | ^9.0",
+                "psr/simple-cache": "~1.0",
+                "web-token/jwt-key-mgmt": "~2.0",
+                "web-token/jwt-signature": "~2.0"
+            },
+            "suggest": {
+                "spomky-labs/jose": "Allow using JSON Web Token for authenticating in Provider (do not work with PHP 7.2).",
+                "web-token/jwt-key-mgmt": "Allow using JSON Web Token for authenticating in Provider.",
+                "web-token/jwt-signature": "Allow using JSON Web Token for authenticating in Provider."
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "name": "apple/apn-push",
+                    "url": "https://github.com/ZhukV/AppleApnPush"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Apple\\ApnPush\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vitaliy Zhuk",
+                    "email": "zhuk2205@gmail.com"
+                }
+            ],
+            "description": "Push notifications to Apple devices",
+            "homepage": "https://github.com/ZhukV/AppleApnPush",
+            "keywords": [
+                "apn",
+                "apple",
+                "notifications",
+                "push"
+            ],
+            "support": {
+                "issues": "https://github.com/ZhukV/AppleApnPush/issues",
+                "source": "https://github.com/ZhukV/AppleApnPush/tree/v3.1.0"
+            },
+            "time": "2021-04-17T08:23:22+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}

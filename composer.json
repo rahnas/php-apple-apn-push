@@ -1,0 +1,5 @@
+{
+    "require": {
+        "apple/apn-push": "^3.1"
+    }
+}
