@@ -17,7 +17,8 @@ use Apple\ApnPush\Model\Receiver;
 
 use Apple\ApnPush\Exception\SendNotification\SendNotificationException;
 
-// p12を変換したpem形式のファイルパス
+// Pem format file path converted from p12
+
 $cert_pem_filepath = 'cert.pem';
 // Bundle Id
 $bundle_id = 'com.example.com';
@@ -28,14 +29,14 @@ $device_token = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
 $certificate = new Certificate($cert_pem_filepath, '');
 $authenticator = new CertificateAuthenticator($certificate);
 
-// HTTP/2プロトコルを使用するsenderを生成
+// Generate a sender that uses the HTTP / 2 protocol updated for 2021 Apple push update
 $builder = new Http20Builder($authenticator);
 $sender = $builder->build();
 
-// デバイストークンを指定し、Receiverを生成
+// Specify the device token and generate a Receiver
 $receiver = new Receiver(new DeviceToken($device_token), $bundle_id);
 
-// 通知を生成
+// Generate notification
 $notification = Notification::createWithBody('Hello ;)');
 $alert = (new Alert())
     ->withBody('Hello ;)')
@@ -49,7 +50,7 @@ $payload = (new Payload($aps));
 $notification = (new Notification($payload));
 
 try {
-  // 通知を送信、Sandboxの場合は第3引数にtrueを渡す
+  // 3rd parameter is sandbod true / false. Change it to false for sending production push.
   $sender->send($receiver, $notification, true);
 } catch (SendNotificationException $e) {
   var_dump($e);
